@@ -87,7 +87,7 @@ span, i{
 .nav{
     position: fixed;
     top: 0;
-    left: -100%;
+    /*left: -100%;*/
     height: 100vh;
     padding: 16px 16px 0;
     background-color: #1c1c1c;
@@ -102,5 +102,106 @@ span, i{
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 48px;
-    
+    overflow: auto;
+    scrollbar-width: none;
 }
+
+.nav-container::-webkit-scrollbar{
+    display: none;
+}
+
+.nav-logo{
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.logo-name{
+    display: flex;
+}
+
+.logo-name i{
+    font-size: 25px;
+    margin-right: 10px;
+    color: #ff0000;
+}
+
+.nav-list, .nav-item{
+    display: grid;
+}
+
+.nav-list{
+    row-gap: 40px;
+}
+
+.nav-item{
+    row-gap: 24px;
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.nav-link:hover{
+    color: #ff0000;
+}
+
+.nav-icon{
+    width: 40px;
+    font-size: 19px;
+}
+
+.nav-name{
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+
+.nav-subtitle{
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #a5a1aa;
+}
+
+/*Dropdown*/
+
+.nav-dropdown {
+    overflow: hidden;
+    max-height: 21px;
+    transition: 0.5s;
+  }
+  
+  .nav-collapse {
+    background-color: #232323;
+    border-radius: 4px;
+    margin-top: 16px;
+  }
+  
+  .nav-dropdown-content {
+    display: grid;
+    row-gap: 8px;
+    padding: 10px;
+  }
+  
+  .nav-dropdown-item {
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+  }
+  
+  .nav-dropdown-item:hover {
+    color: #ff0000;
+  }
+  
+  .nav-dropdown-icon {
+    margin-left: auto;
+    transition: 0.5s;
+  }
+  
+  .nav-dropdown:hover {
+    min-height: 8rem;
+  }
