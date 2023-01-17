@@ -1,5 +1,6 @@
 const showMenu = (headerToggle,navbarId) => {
-    const toggleBtn = document.getElementById(headerToggle);
+    let toggleBtn = document.getElementById(headerToggle);
+    let nav = document.getElementById(navbarId);
 
     if(headerToggle && navbarId){
         toggleBtn.addEventListener('click', () => {
@@ -9,7 +10,7 @@ const showMenu = (headerToggle,navbarId) => {
     }
 }
 
-showMenu('header-toggle', 'navbar');
+showMenu('header-toggle', 'nav-bar');
 
 const linkColor = document.querySelectorAll('.nav-link');
 
