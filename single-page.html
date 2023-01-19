@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link type="images/png" rel="icon" href="images/icons8-youtube.png">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous" />
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/single.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/single.css">
   <title>Youtube </title>
 </head>
 
@@ -15,7 +15,13 @@
   <!--    header      -->
   <header class="header">
     <div class="header_container">
-      <div class="none"> </div>
+      <div class="header-logo"> <a href="#" class="active menu">
+        <i class="fa-solid fa-bars menu2" id="main-menu"></i>
+        <span class="logo-name">
+          <i class="fab fa-youtube"></i>
+          Youtube
+        </span>
+      </a></div>
       <div class="search">
         <input type="text" placeholder="Search">
         <i class="fa-solid fa-magnifying-glass"></i>
@@ -25,12 +31,11 @@
       <div class="user">
         <div class="icon">
           <i class="fa-solid fa-video"></i>
-          <i class="fa-solid fa-grip"></i>
           <i class="fa-solid fa-bell"></i>
         </div>
 
         <div class="img">
-          <img src="images/logo.png" alt="">
+          <img src="https://img.icons8.com/external-victoruler-flat-victoruler/64/000000/external-boy-people-victoruler-flat-victoruler-6.png" alt="">
         </div>
       </div>
 
@@ -42,16 +47,10 @@
   <!--    header      -->
 
   <!--    nav      -->
-  <section class="nav" id="navbar">
+  <section class="nav" id="nav-bar">
     <nav class="nav_container">
       <div>
-        <a href="#" class="nav_link nav_logo ">
-          <i class="fa-solid fa-bars nav_icon"></i>
-          <span class="logo_name">
-            <i class="fab fa-youtube"></i>
-            Youtube
-          </span>
-        </a>
+        
 
         <div class="nav_list">
           <div class="nav_items navtop">
@@ -67,10 +66,7 @@
               <i class="fa-brands fa-tiktok nav_icon"></i>
               <span class="nav_name">Short Video</span>
             </a>
-            <a href="#" class="nav_link navtop">
-              <i class="fa-solid fa-users nav_icon"></i>
-              <span class="nav_name">Channel</span>
-            </a>
+            
             <a href="#" class="nav_link navtop">
               <i class="fa-solid fa-video nav_icon"></i>
               <span class="nav_name">Library</span>
@@ -80,37 +76,41 @@
               <span class="nav_name">History</span>
             </a>
             <a href="#" class="nav_link navtop">
-              <i class="fa-solid fa-thumbs-up nav_icon"></i>
+              <i class="fa-solid fa-clock nav_icon"></i>
               <span class="nav_name">Like</span>
             </a>
+            <div class="nav_dropdown-collapse" id="moreOptions">
+              <div class="nav_list">
+                <div class="nav_items navtop">
+                  <a href="#" class="nav_link navtop">
+                    <i class="fa fa-house nav_icon"></i>
+                    <span class="nav_name">Tekst</span>
+                  </a>
+                  <a href="#" class="nav_link navtop">
+                    <i class="fa fa-house nav_icon"></i>
+                    <span class="nav_name">Tekst</span>
+                  </a>
+              </div>
+            </div>
+          </div>
 
             <div class="nav_dropdown">
               <a href="#" class="nav_link">
-                <i class="fa-solid fa-chevron-down nav_icon"></i>
-                <span class="nav_name">Show More</span>
+                <i class="nav_icon fa-solid fa-chevron-down" id="icon"></i>
+                <span class="nav_name"  id="showMore">Show More</span>
               </a>
 
-              <div class="nav_dropdown-collapse">
-                <div class="nav_dropdown-content">
-                  <a href="#" class="nav_dropdown-item">Grid Box</a>
-                  <a href="#" class="nav_dropdown-item">Frontend Design</a>
-                  <a href="#" class="nav_dropdown-item">Backend Design</a>
-                </div>
-              </div>
-            </div>
+              
 
-            <a href="#" class="nav_link">
-              <i class="fa-solid fa-comment nav_icon"></i>
-              <span class="nav_name">Messages</span>
-            </a>
+            
           </div>
 
           <div class="nav_items subscribe-container">
-            <h3 class="nav_subititle">SUBSCRIPTIONS</h3>
+            <h3 class="nav_subititle" id="subscribe">SUBSCRIPTIONS</h3>
 
             <a href="#" class="nav_link">
               <img class="subscribe" src="https://img.icons8.com/external-victoruler-flat-victoruler/64/000000/external-boy-people-victoruler-flat-victoruler-5.png" alt="">
-              <span class="nav_name">GorkCoder</span>
+              <span class="nav_name">User</span>
             </a>
             <a href="#" class="nav_link">
               <img class="subscribe" src="https://img.icons8.com/external-victoruler-flat-victoruler/64/000000/external-boy-occupation-and-people-victoruler-flat-victoruler.png" />
@@ -162,13 +162,13 @@
       <div class="left">
         <div class="left_content">
           <video controls>
-            <source src="video/video1.mp4" type="video/mp4" poster="images/video_images/back1.jpg">
+            <source src="video/video1.mp4" type="video/mp4" poster="images/video_images/back3.jpg">
           </video>
 
           <!--        video tages            -->
           <div class="tag">
             <label class="tags">#web #webdesign #Frontend </label>
-            <p>How to make Hotel Booking Website With HTML CSS ......</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
           <!--        video tages            -->
 
@@ -210,13 +210,14 @@
           <!--        video details            -->
           <div class="details flex border_bottom">
             <div class="img">
-              <img src="images/logo.png" alt="">
+              <img src="https://img.icons8.com/external-victoruler-flat-victoruler/64/000000/external-boy-people-victoruler-flat-victoruler-6.png" alt="">
             </div>
             <div class="heading">
-              <h4>GorkCoder <i class="fa fa-circle-check"></i> </h4>
+              <h4>User <i class="fa fa-circle-check"></i> </h4>
               <span>15M Subscribers</span>
-              <h5>Responsive Youtube Clone in HTML CSS and Javascript | Dark/LIght Mode | GorkCoder </h5>
-              <h5>In this video tutorial, I have show how to create a responsive youtube clone using Htlm and css only</h5>
+              <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              </h5>
+              <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
               <span>Show More</span>
             </div>
           </div>
@@ -235,7 +236,7 @@
           <!--        video comment  by self           -->
           <div class="details comment_self flex">
             <div class="img">
-              <img src="images/logo.png" alt="">
+              <img src="https://img.icons8.com/external-victoruler-flat-victoruler/64/000000/external-boy-people-victoruler-flat-victoruler-6.png" alt="">
             </div>
             <div class="heading">
               <input type="text" placeholder="Add a comment....">
@@ -250,7 +251,9 @@
               </div>
               <div class="heading">
                 <h4>Matheus Silva <span>2 months ago</span> </h4>
-                <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
+                  pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
+                </p>
                 <div class="comment-like flex">
                   <div class="icon">
                     <i class="fa fa-thumbs-up"></i>
@@ -264,18 +267,19 @@
                     <label>REPLY</label>
                   </div>
                 </div>
+                <label class="tags"  id="show-reply"> <i class="fa fa-caret-down"> </i> View Replay From User </label>
               </div>
             </div>
           </div>
+          
           <!--        video comment  by other           -->
-          <div class="replay">
-            <label class="tags"> <i class="fa fa-caret-up"></i> Hide Reply </label>
+          <div class="replay" id="reply">
             <div class="replay-details flex">
               <div class="img">
-                <img src="images/logo.png" alt="">
+                <img src="https://img.icons8.com/external-victoruler-flat-victoruler/64/000000/external-boy-people-victoruler-flat-victoruler-6.png" alt="">
               </div>
               <div class="text">
-                <h4> <label>GorkCoder</label> <span>2 months ago</span> </h4>
+                <h4> <label>User</label> <span>2 months ago</span> </h4>
                 <p>Thanks You</p>
               </div>
             </div>
@@ -290,7 +294,8 @@
               </div>
               <div class="heading">
                 <h4>Matheus Silva <span>2 months ago</span> </h4>
-                <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
+                  pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus.</p>
                 <div class="comment-like flex">
                   <div class="icon">
                     <i class="fa fa-thumbs-up"></i>
@@ -304,7 +309,7 @@
                     <label>REPLY</label>
                   </div>
                 </div>
-                <label class="tags"> <i class="fa fa-caret-down"> </i> View Replay From GorkCoder </label>
+                <label class="tags"> <i class="fa fa-caret-down"> </i> View Replay From User </label>
               </div>
             </div>
           </div>
@@ -315,7 +320,8 @@
               </div>
               <div class="heading">
                 <h4>Matheus Silva <span>2 months ago</span> </h4>
-                <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
+                  pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus.</p>
                 <div class="comment-like flex">
                   <div class="icon">
                     <i class="fa fa-thumbs-up"></i>
@@ -329,7 +335,7 @@
                     <label>REPLY</label>
                   </div>
                 </div>
-                <label class="tags"> <i class="fa fa-caret-down"> </i> View Replay From GorkCoder </label>
+                
               </div>
             </div>
           </div>
@@ -340,7 +346,8 @@
               </div>
               <div class="heading">
                 <h4>Matheus Silva <span>2 months ago</span> </h4>
-                <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
+                  pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus.</p>
                 <div class="comment-like flex">
                   <div class="icon">
                     <i class="fa fa-thumbs-up"></i>
@@ -354,7 +361,7 @@
                     <label>REPLY</label>
                   </div>
                 </div>
-                <label class="tags"> <i class="fa fa-caret-down"> </i> View Replay From GorkCoder </label>
+                
               </div>
             </div>
           </div>
@@ -365,7 +372,8 @@
               </div>
               <div class="heading">
                 <h4>Matheus Silva <span>2 months ago</span> </h4>
-                <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
+                  pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus.</p>
                 <div class="comment-like flex">
                   <div class="icon">
                     <i class="fa fa-thumbs-up"></i>
@@ -383,16 +391,8 @@
             </div>
           </div>
           <div class="replay">
-            <label class="tags"> <i class="fa fa-caret-up"></i> Hide Reply </label>
-            <div class="replay-details flex">
-              <div class="img">
-                <img src="images/logo.png" alt="">
-              </div>
-              <div class="text">
-                <h4> <label>GorkCoder</label> <span>2 months ago</span> </h4>
-                <p>Thanks You</p>
-              </div>
-            </div>
+            
+           
           </div>
         </div>
       </div>
@@ -410,21 +410,21 @@
 
           <div class="video_items vide_sidebar flex">
             <a href="#">
-              <img src="images/video_images/back5.jpg" alt="">
+              <img src="images/video_images/back4.jpg" alt="">
             </a>
             <div class="details">
-              <p>How to make hotel booking website with HTML css....</p>
-              <span>GorkCoder <i class="fa fa-cricle-check"> </i> </span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <span>User <i class="fa fa-cricle-check"> </i> </span>
               <span>56.7M . 1 Week ago</span>
             </div>
           </div>
           <div class="video_items vide_sidebar flex">
             <a href="#">
-              <img src="images/video_images/back6.jpg" alt="">
+              <img src="images/video_images/back5.jpg" alt="">
             </a>
             <div class="details">
-              <p>How to make hotel booking website with HTML css....</p>
-              <span>GorkCoder <i class="fa fa-cricle-check"> </i> </span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <span>User <i class="fa fa-cricle-check"> </i> </span>
               <span>56.7M . 1 Week ago</span>
             </div>
           </div>
@@ -433,8 +433,8 @@
               <img src="images/video_images/back7.jpg" alt="">
             </a>
             <div class="details">
-              <p>How to make hotel booking website with HTML css....</p>
-              <span>GorkCoder <i class="fa fa-cricle-check"> </i> </span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <span>User <i class="fa fa-cricle-check"> </i> </span>
               <span>56.7M . 1 Week ago</span>
             </div>
           </div>
@@ -443,8 +443,8 @@
               <img src="images/video_images/back8.jpg" alt="">
             </a>
             <div class="details">
-              <p>How to make hotel booking website with HTML css....</p>
-              <span>GorkCoder <i class="fa fa-cricle-check"> </i> </span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <span>User <i class="fa fa-cricle-check"> </i> </span>
               <span>56.7M . 1 Week ago</span>
             </div>
           </div>
@@ -453,8 +453,8 @@
               <img src="images/video_images/back9.jpg" alt="">
             </a>
             <div class="details">
-              <p>How to make hotel booking website with HTML css....</p>
-              <span>GorkCoder <i class="fa fa-cricle-check"> </i> </span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <span>User <i class="fa fa-cricle-check"> </i> </span>
               <span>56.7M . 1 Week ago</span>
             </div>
           </div>
@@ -463,8 +463,8 @@
               <img src="images/video_images/back10.jpg" alt="">
             </a>
             <div class="details">
-              <p>How to make hotel booking website with HTML css....</p>
-              <span>GorkCoder <i class="fa fa-cricle-check"> </i> </span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <span>User <i class="fa fa-cricle-check"> </i> </span>
               <span>56.7M . 1 Week ago</span>
             </div>
           </div>
@@ -475,7 +475,7 @@
 
 
 
-  <script src="js/main.js" charset="utf-8"></script>
+  <script src="scripts/single.js" charset="utf-8"></script>
 </body>
 
 </html>

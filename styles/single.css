@@ -221,6 +221,16 @@
     font-size: 13px;
     margin: 0;
   }
+
+  .replay{
+    display: none;
+    transition: 0.5s;
+  }
+
+  .apear{
+    display: block;
+    transition: 1s;
+  }
   
   @media only screen and (max-width:768px) {
     .video_items {
